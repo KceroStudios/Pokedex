@@ -44,7 +44,7 @@ function App() {
               
             </div>
           </div>
-          <div>002</div>
+          <div>000000000000000000002</div>
           </Pokedex>  
           <img width={600} src={pokedex} alt="pokedex" />
         </Contenedor>
