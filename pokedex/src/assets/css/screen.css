@@ -1,14 +1,14 @@
-.marco_pantalla {
+.screen_container {
     background: #eee;
     width: 170px;
     margin: 0 auto;
-    border-radius: 5px 5px 5px 20px;
-    outline: 1px #5c0909 solid;
+    border-radius: 3px 3px 3px 20px;
+    outline: 2px #5c0909 solid;
     border: 2px solid #ccc;
-    border-bottom: 5px solid #ccc;
+    border-bottom: 4px solid #ccc;
 }
 
-.marco_pantalla_2 {
+.screen_container_2 {
     margin: 0 auto;
     border-radius: 2px 2px 2px 16px;
     border: 1px solid #777;
@@ -17,15 +17,15 @@
     align-items: center;
 }
 
-.pantalla_led_group{
+.screen_led_group{
     display: flex;
 }
 
-.pantalla_led_group .led{
+.screen_led_group .led{
     transform: scale(.6);
 }
 
-.pantalla {
+.screen {
     background: #000;
     border: 1px solid #ccc;
     height: 90px;
@@ -34,7 +34,7 @@
     outline: 1px solid #777;
 }
 
-.contenedor_bocina {
+.horm_container {
     display: flex;
     justify-content: space-between;
     flex-direction: row;

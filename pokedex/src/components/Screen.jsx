@@ -1,16 +1,16 @@
-import '../assets/css/pantalla.css'
+import '../assets/css/screen.css'
 import Led from './Led'
 
-const Pantalla = () => {
+const Screen = () => {
     return(
-        <div className='marco_pantalla'>
-            <div className='marco_pantalla_2'>
-                <div className='pantalla_led_group'>
+        <div className='screen_container'>
+            <div className='screen_container_2'>
+                <div className='screen_led_group'>
                     <Led color={'led_red'}/>
                     <Led color={'led_red'}/>
                 </div>
-                <div className='pantalla'></div>
-                <div className='contenedor_bocina'>
+                <div className='screen'></div>
+                <div className='horm_container'>
                     <Led color={'led_red'}/>
                     <div>
                         ==
@@ -21,4 +21,4 @@ const Pantalla = () => {
     )
 }
 
-export default Pantalla
+export default Screen

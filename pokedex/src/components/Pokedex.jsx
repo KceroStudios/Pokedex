@@ -3,8 +3,10 @@ import '../assets/css/pokedex.css'
 
 const Pokedex = ({children}) => {
     return(
-        <div className="pokedex">
-            {children}
+        <div className="pokedex_container">
+            <div className="pokedex">
+                {children}
+            </div>
         </div>
     )
 }

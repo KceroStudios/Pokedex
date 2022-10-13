@@ -1,21 +1,20 @@
-.visagra {
+.bar {
     border: 1px solid #700808;
     width: 30px;
-    position: absolute;
-    height: 275px;
-    margin-left: 225px;
-    margin-top: -23px;
+    height: 280px;
+    margin-left: -25px;
+    margin-top: 55px;
     background: #de1b3b;
     border-radius: 7px;
 }
 
-.visagra_col {
+.bar_col {
     width: 30px;
     display: flex;
     justify-content: space-between;
 }
 
-.visagra_col .brillo {
+.bar_col .brigh {
     width: 6px;
     background: #ffffff5e;
     border-radius: 8px 3px 2px 4px;
@@ -25,7 +24,7 @@
     filter: blur(0.3px);
 }
 
-.visagra_col .sombra {
+.bar_col .shaddow {
     width: 9px;
     background: #00000061;
     border-radius: 2px 5px 2px 2px;
@@ -36,26 +35,26 @@
     margin-bottom: 1px;
 }
 
-.visagra_col.col1 {
+.bar_col.col1 {
     height: 25px;
 }
 
-.visagra_col.col2 {
-    height: 207px;
+.bar_col.col2 {
+    height: 212px;
 }
 
-.visagra_col.col3 {
+.bar_col.col3 {
     height: 25px;
 }
 
-.visagra_separador {
+.bar_separador {
     height: 10px;
     border-top: 1px solid #700808;
     border-radius: 20px;
     margin-bottom: -9px;
 }
 
-.visagra_separador.end {
+.bar_separador.end {
     height: 7px;
     background: #89051c;
     border-radius: 6px;

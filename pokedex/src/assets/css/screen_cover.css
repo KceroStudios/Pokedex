@@ -1,0 +1,12 @@
+.screen_cover {
+    background: #111;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid #333;
+    outline: 2px solid #700808;
+    color: #ccc;
+    font-size: 27px;
+}

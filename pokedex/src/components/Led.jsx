@@ -4,7 +4,7 @@ const Led = ({color}) =>{
     const led_color = `${color} led`
     return(
         <div className= {led_color} >
-            <div className='led_brillo'></div>
+            <div className='led_brigh'></div>
         </div>
     )
 }

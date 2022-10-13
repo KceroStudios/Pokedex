@@ -1,4 +1,4 @@
-.controles_contenedor {
+.controls_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -6,7 +6,7 @@
     margin: 10px 0px;
 }
 
-.boton_redondo {
+.row_button {
     background: linear-gradient(45deg, black, #222222);
     height: 35px;
     width: 35px;
@@ -15,7 +15,7 @@
     border: 2px solid #000;
 }
 
-.boton_group {
+.button_group {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -23,7 +23,7 @@
     justify-content: center;
 }
 
-.boton_horizontal {
+.button_h {
     background: #bd3030;
     border-radius: 20px;
     height: 9px;
@@ -31,7 +31,7 @@
     border: 1px solid #700808;
 }
 
-.boton_horizontal_verde {
+.button_h_green {
     background: rgb(0, 128, 92);
     margin-left: 4px;
 
@@ -47,20 +47,20 @@
     margin-top: 10px;
 }
 
-.boton_group_cruzeta {
+.button_group_cross {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 54px;
 }
 
-.boton_cruz {
+.button_cross {
     outline: 2px solid #700808;
     border: 2px solid #000;
     background: linear-gradient(45deg, black, #222222);
 }
 
-.boton_cruz_t {
+.button_cross_t {
     height: 20px;
     width: 15px;
     border-radius: 7px 7px 4px 4px;
@@ -68,20 +68,20 @@
     margin-bottom: 2px;
 }
 
-.boton_cruz_l {
+.button_cross_l {
     height: 15px;
     width: 20px;
     border-radius: 7px 4px 4px 7px;
 }
 
-.boton_cruz_r {
+.button_cross_r {
     height: 15px;
     width: 20px;
     border-radius: 4px 7px 7px 4px;
     margin-left: 14px;
 }
 
-.boton_cruz_b {
+.button_cross_b {
     height: 20px;
     width: 15px;
     border-radius: 4px 4px 7px 7px;

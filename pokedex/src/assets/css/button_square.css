@@ -1,0 +1,18 @@
+.pokedex_cover .button_group {
+    display: flex;
+    width: 100%;
+    margin-top: 12px;
+    background: #700808;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.button_square {
+    background: #28abfd;
+    border: 1px solid #0f4266;
+    border-bottom: 3px solid #0f4266;
+    border-radius: 3px;
+    outline: 1px solid #222;
+    width: 20%;
+    height: 25px;
+}

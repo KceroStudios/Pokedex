@@ -1,0 +1,48 @@
+import '../assets/css/pokedex_cover.css'
+import Separator from './Separator'
+import ScreenCover from './ScreenCover'
+import ButtonSquare from './ButtonSquare'
+import Led from './Led'
+
+const PoquedexCover = () =>{
+    return(
+        <div className='pokedex_cover'>
+            <Separator clase={'separator_1'}/>
+            <div className='cover_controls'>
+                <Separator clase={'separator_2'}/>
+                <div className='cover_controls_container'>
+                    <ScreenCover />
+                    <div className='button_group'>
+                        <ButtonSquare/>
+                        <ButtonSquare/>
+                        <ButtonSquare/>
+                        <ButtonSquare/>
+                        <ButtonSquare/>
+                        <ButtonSquare/>
+                        <ButtonSquare/>
+                        <ButtonSquare/>
+                        <ButtonSquare/>
+                        <ButtonSquare/>
+                    </div>
+                    <div className='button_group_2'>
+                        <button class="button_h button_h_gray "></button>
+                        <button class="button_h button_h_gray "></button>
+                    </div>
+                    <div className='button_group_3'>
+                        <ButtonSquare/>
+                        <ButtonSquare/>
+                        <Led color='led_yellow'/>
+                    </div>
+                    <div className='button_group_4'>
+                        <button class="button_h button_h_gray "></button>
+                        <button class="button_h button_h_gray "></button>
+                    </div>
+                    
+                </div>
+
+            </div>                          
+        </div>
+    )
+}
+
+export default PoquedexCover
