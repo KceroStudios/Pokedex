@@ -12,31 +12,31 @@
 }
 
 .separador_1 .separador_1_1 {
-    width: 50%;
+    width: 150px;
     height: 5px;
     border-radius: 0px 0px 5px 0px;
 }
 
 .separador_1 .separador_1_2 {
-    width: 25%;
+    width: 50px;
     transform: rotate(330deg);
-    margin-top: -13px;
+    margin-top: -12px;
     margin-left: -9px;
     border-radius: 0px 3px 0 0px;
-    height: 6px;
+    height: 5px;
 }
 
 .separador_1 .separador_1_3 {
-    width: 35%;
+    width: 67px;
     margin-top: -24px;
-    margin-left: -10px;
-    border-radius: 5px 0 0 0px;
+    margin-left: -8px;
+    border-radius: 4px 0 0 0px;
 }
 
 .separador_2 {
     display: flex;
     flex-direction: row;
-    width: 170px;
+    width: 215px;
     margin-top: 5px;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .separador_2 .separador_1_1 {
-    width: 95px;
+    width: 145px;
     height: 10px;
     border-radius: 4px 0px 0 0px;
     border-bottom: none;
@@ -70,5 +70,5 @@
     height: 32px;
     border-bottom: none;
     border-left: none;
-    width: 35px;
+    width: 30px;
 }

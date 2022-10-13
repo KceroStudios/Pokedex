@@ -7,6 +7,8 @@ import Camera from './components/Camera'
 import Led from './components/Led'
 import Separador1 from './components/Separador1'
 import Visagra from './components/Visagra'
+import Pantalla from './components/Pantalla'
+import Controles from './components/controles'
 
 
 function App() {
@@ -31,9 +33,8 @@ function App() {
                 <div className='pokedex_cuerpo_sub_contenedor_col_1'>
                   <Separador1 clase={'separador_2'}/>
                   <div className='contenedor_pantalla_controles'>
-                    contenido
-                    <div>Pantalla</div>
-                    <div>Controles</div>
+                    <Pantalla />
+                    <Controles />
                   </div>
                 </div>
 
@@ -44,7 +45,7 @@ function App() {
               
             </div>
           </div>
-          <div>000000000000000000002</div>
+          <div className='flip'>000000000000000000002</div>
           </Pokedex>  
           <img width={600} src={pokedex} alt="pokedex" />
         </Contenedor>

@@ -1,0 +1,90 @@
+.controles_contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    margin: 10px 0px;
+}
+
+.boton_redondo {
+    background: linear-gradient(45deg, black, #222222);
+    height: 35px;
+    width: 35px;
+    border-radius: 30px;
+    outline: 2px solid #700808;
+    border: 2px solid #000;
+}
+
+.boton_group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70px;
+    justify-content: center;
+}
+
+.boton_horizontal {
+    background: #bd3030;
+    border-radius: 20px;
+    height: 9px;
+    width: 30px;
+    border: 1px solid #700808;
+}
+
+.boton_horizontal_verde {
+    background: rgb(0, 128, 92);
+    margin-left: 4px;
+
+}
+
+.panel {
+    background: rgb(53, 94, 53);
+    height: 20px;
+    outline: 2px solid #700808;
+    border-radius: 4px;
+    border: 1px solid #1e9a47;
+    width: 68px;
+    margin-top: 10px;
+}
+
+.boton_group_cruzeta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 54px;
+}
+
+.boton_cruz {
+    outline: 2px solid #700808;
+    border: 2px solid #000;
+    background: linear-gradient(45deg, black, #222222);
+}
+
+.boton_cruz_t {
+    height: 20px;
+    width: 15px;
+    border-radius: 7px 7px 4px 4px;
+    margin-left: 20px;
+    margin-bottom: 2px;
+}
+
+.boton_cruz_l {
+    height: 15px;
+    width: 20px;
+    border-radius: 7px 4px 4px 7px;
+}
+
+.boton_cruz_r {
+    height: 15px;
+    width: 20px;
+    border-radius: 4px 7px 7px 4px;
+    margin-left: 14px;
+}
+
+.boton_cruz_b {
+    height: 20px;
+    width: 15px;
+    border-radius: 4px 4px 7px 7px;
+    margin-left: 20px;
+    margin-top: 2px;
+}

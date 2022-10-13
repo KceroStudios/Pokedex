@@ -11,8 +11,8 @@
     background: #2aa9fb;
     border: 1px solid #333;
     border-radius: 30px;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -21,8 +21,8 @@
 .led_group_cam_2 {
     background: #166b9d;
     border-radius: 30px;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     filter: blur(1.5px);
 }
 
