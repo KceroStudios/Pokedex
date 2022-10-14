@@ -4,14 +4,14 @@ import ScreenCover from './ScreenCover'
 import ButtonSquare from './ButtonSquare'
 import Led from './Led'
 
-const PoquedexCover = () =>{
+const PoquedexCover = ({name, weight }) =>{
     return(
         <div className='pokedex_cover'>
             <Separator clase={'separator_1'}/>
             <div className='cover_controls'>
                 <Separator clase={'separator_2'}/>
                 <div className='cover_controls_container'>
-                    <ScreenCover />
+                    <ScreenCover name={name} weight={weight} />
                     <div className='button_group'>
                         <ButtonSquare/>
                         <ButtonSquare/>

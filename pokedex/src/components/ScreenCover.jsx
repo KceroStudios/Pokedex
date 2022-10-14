@@ -1,9 +1,10 @@
 import '../assets/css/screen_cover.css'
 
-const ScreenCover = () => {
+const ScreenCover = ({name, weight }) => {
     return(
         <div className='screen_cover'>
-            000009
+            <i> { name }</i>
+            <i> { weight }</i>
         </div>
     )
 }

@@ -11,3 +11,7 @@
     flex-wrap: wrap;
 }
 
+.pokedex_machine{
+    display: flex;
+    margin-top: 25px;
+}

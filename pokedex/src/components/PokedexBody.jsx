@@ -5,7 +5,7 @@ import Separator from './Separator'
 import Screen from './Screen'
 import Controls from './Controls'
 
-const PokedexBody = () => {
+const PokedexBody = ({imgPokemon}) => {
     return(
         <div className='pokedex_body'>
             <div className='pokedex_body_container'>
@@ -22,7 +22,7 @@ const PokedexBody = () => {
                     <div className='pokedex_body_sub_container_top'>
                         <Separator clase={'separator_2'}/>
                         <div className='container_screen_controls'>
-                            <Screen></Screen>
+                            <Screen imgPokemon={ imgPokemon }></Screen>
                             <Controls></Controls>
                         </div>
                     </div>
