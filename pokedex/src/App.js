@@ -5,14 +5,15 @@ import CenterBar from './components/CenterBar'
 import PokedexBody from './components/PokedexBody'
 import PoquedexCover from './components/PokedexCover'
 
-
 function App() {
   return (  
+    <>
     <Pokedex>
       <PokedexBody></PokedexBody>
       <CenterBar />
-      <PoquedexCover></PoquedexCover>
-    </Pokedex>  
+      <PoquedexCover></PoquedexCover> 
+    </Pokedex>
+    </>
     
   )
 }

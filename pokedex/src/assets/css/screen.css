@@ -41,3 +41,18 @@
     width: 80%;
     align-items: center;
 }
+
+.screen .cont {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.temp{
+    margin-top: -30px;
+}
+
+small{
+    background: red;
+}

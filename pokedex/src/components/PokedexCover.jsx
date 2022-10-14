@@ -25,8 +25,8 @@ const PoquedexCover = () =>{
                         <ButtonSquare/>
                     </div>
                     <div className='button_group_2'>
-                        <button class="button_h button_h_gray "></button>
-                        <button class="button_h button_h_gray "></button>
+                        <button className="button_h button_h_gray "></button>
+                        <button className="button_h button_h_gray "></button>
                     </div>
                     <div className='button_group_3'>
                         <ButtonSquare/>
@@ -34,8 +34,8 @@ const PoquedexCover = () =>{
                         <Led color='led_yellow'/>
                     </div>
                     <div className='button_group_4'>
-                        <button class="button_h button_h_gray "></button>
-                        <button class="button_h button_h_gray "></button>
+                        <button className="button_h button_h_gray "></button>
+                        <button className="button_h button_h_gray "></button>
                     </div>
                     
                 </div>
