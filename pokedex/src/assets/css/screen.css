@@ -36,25 +36,16 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
-@keyframes example {
-    from {transform: rotateY(90deg);}
-    to {transform: rotateY(0deg);}
-  }
-
-  @keyframes example2 {
-    from {transform: rotateY(90deg); transform: ;}
-    to {transform: rotateY(0deg);}
-  }
-
   .row_left{
-    animation: example ;
+    animation: rotate_y ;
     animation-duration: 1s;
   }
 
   .row_right{
-    animation: example2 ;
+    animation: rotate_y_2 ;
     animation-duration: 1s;
   }
 

@@ -6,30 +6,13 @@
     margin: 10px 0px;
 }
 
-
-
 .button_group {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 70px;
-    justify-content: center;
+    justify-content: space-between;
 }
-
-.button_h {
-    background: #bd3030;
-    border-radius: 20px;
-    height: 9px;
-    width: 30px;
-    border: 1px solid #700808;
-}
-
-.button_h_green {
-    background: rgb(0, 128, 92);
-    margin-left: 4px;
-
-}
-
 .panel {
     background: rgb(53, 94, 53);
     height: 20px;

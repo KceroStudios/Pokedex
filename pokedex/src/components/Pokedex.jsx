@@ -7,11 +7,9 @@ import CenterBar from '../components/CenterBar'
 import { AiOutlineSearch } from "react-icons/ai";
 
 const Pokedex = ( ) => {
-    
-
     const [ search, setSearch ] = useState ( '1' )
     const [ pokemon, setPokemon ] = useState ( '' )
-    const [ atre, setAtre ] = useState ( '' )
+    const [ rotarImagen, setRotarImagen ] = useState ( '' )
     const [ imgClass, setImgClass] = useState ( '' )
     
 
@@ -26,12 +24,17 @@ const Pokedex = ( ) => {
         console.log(data.abilities[0].ability.name) 
     }
 
-   
-    const rowButtonOnClick = async ( e ) =>{
-        setAtre( atre == 2 ? 1 : 2 )
-        setImgClass( imgClass == 'row_left' ? 'row_right' : 'row_left')
-        const data = await searchPokemon( search )
-        setPokemon(data)
+    const rowButtonOnClick = ( e ) =>{
+        setRotarImagen( rotarImagen == 2 ? 1 : 2 )
+        setImgClass( imgClass == 'row_left' ? 'row_right' : 'row_left')  
+    }
+
+    const btnZoomInOnClick = ( e ) =>{
+        setImgClass( 'zoom_in' )  
+    }
+
+    const btnZoomoutOnClick = ( e ) =>{
+        setImgClass( 'zoom_out' )  
     }
 
     
@@ -41,11 +44,7 @@ const Pokedex = ( ) => {
 
     const namePokemon = pokemon &&  pokemon.abilities[0].ability.name
     
-    const imgPokemon = atre == 2 ? pokemon &&  pokemon.sprites.back_default : pokemon &&  pokemon.sprites.front_default
-    // const imgPokemon2 = imgPokemon == false ?  : imgPokemon
-    console.log(imgPokemon )
-
- 
+    const imgPokemon = rotarImagen == 2 ? pokemon &&  pokemon.sprites.back_default : pokemon &&  pokemon.sprites.front_default
 
     return(
         <div className="pokedex_container">
@@ -58,7 +57,13 @@ const Pokedex = ( ) => {
             </header>
             <div className='dexter'>
                 <div className='pokedex_machine'>
-                    <PokedexBody imgClass={ imgClass } imgPokemon={ imgPokemon.length == 0 ? 'https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png' : imgPokemon } rowButtonOnClick={ rowButtonOnClick } />
+                    <PokedexBody 
+                        imgClass={ imgClass } 
+                        imgPokemon={ imgPokemon.length == 0 ? 'https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png' : imgPokemon } 
+                        rowButtonOnClick={ rowButtonOnClick } 
+                        btnZoomInOnClick ={ btnZoomInOnClick }  
+                        btnZoomoutOnClick={ btnZoomoutOnClick }
+                    />
                     <CenterBar />
                     <PoquedexCover name={ namePokemon } weight={ weightPokemon2 } />
                 </div>

@@ -2,7 +2,7 @@ import '../assets/css/controls.css'
 import Button from './Button'
 import { AiOutlineRedo } from "react-icons/ai"
 
-const Controls = ({ rowButtonOnClick }) => {
+const Controls = ({ rowButtonOnClick, btnZoomInOnClick, btnZoomoutOnClick }) => {
     return(
         <div className='controls_container'>
             <Button btnClass={'row_button'} btnOnClick={ rowButtonOnClick }>
@@ -10,8 +10,8 @@ const Controls = ({ rowButtonOnClick }) => {
             </Button>
 
             <div className='button_group'>
-                <button className='button_h'></button>
-                <button className='button_h button_h_green '></button>
+                <Button btnClass={'button_h bg_red'} btnOnClick={ btnZoomInOnClick }> - </Button>
+                <Button btnClass={'button_h bg_green'} btnOnClick={ btnZoomoutOnClick }> + </Button>
                 <div className='panel'></div>
             </div>
 
