@@ -2,7 +2,7 @@ import React from 'react'
 import '../assets/css/screen.css'
 import Led from './Led'
 
-const Screen = ({imgPokemon}) => {
+const Screen = ({imgPokemon, imgClass}) => {
     return(
         <div className='screen_container'>
             <div className='screen_container_2'>
@@ -11,7 +11,7 @@ const Screen = ({imgPokemon}) => {
                     <Led color={'led_red'}/>
                 </div>
                 <div className='screen'>
-                    <img src={imgPokemon} alt="no found" />
+                    <img className={ imgClass } src={imgPokemon} alt="no found" />
                     
                 </div>                    
                 <div className='horm_container'>

@@ -4,10 +4,16 @@ import { searchPokemon } from "../Api";
 import PokedexBody from '../components/PokedexBody'
 import PoquedexCover from '../components/PokedexCover'
 import CenterBar from '../components/CenterBar'
+import { AiOutlineSearch } from "react-icons/ai";
 
 const Pokedex = ( ) => {
+    
+
     const [ search, setSearch ] = useState ( '1' )
     const [ pokemon, setPokemon ] = useState ( '' )
+    const [ atre, setAtre ] = useState ( '' )
+    const [ imgClass, setImgClass] = useState ( '' )
+    
 
     const onChange = ( e ) =>{
         setSearch( e.target.value )
@@ -20,30 +26,44 @@ const Pokedex = ( ) => {
         console.log(data.abilities[0].ability.name) 
     }
 
+   
+    const rowButtonOnClick = async ( e ) =>{
+        setAtre( atre == 2 ? 1 : 2 )
+        setImgClass( imgClass == 'row_left' ? 'row_right' : 'row_left')
+        const data = await searchPokemon( search )
+        setPokemon(data)
+    }
+
+    
+
     const weightPokemon = pokemon &&  pokemon.weight
     const weightPokemon2 = weightPokemon == 0 ? 'Bienvenidos' : weightPokemon
 
     const namePokemon = pokemon &&  pokemon.abilities[0].ability.name
+    
+    const imgPokemon = atre == 2 ? pokemon &&  pokemon.sprites.back_default : pokemon &&  pokemon.sprites.front_default
+    // const imgPokemon2 = imgPokemon == false ?  : imgPokemon
+    console.log(imgPokemon )
 
-    const imgPokemon = pokemon &&  pokemon.sprites.front_default
-    const imgPokemon2 = imgPokemon == false ? 'https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png' : pokemon &&  pokemon.sprites.front_default
-
+ 
 
     return(
         <div className="pokedex_container">
-            <nav>
+            <header className='pokedex_header'>
                 <img alt="PokéAPI" src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" className="logo" width={200} />
                 <div className="buscador">
                     <input placeholder="Buscar Pokemon " onChange={onChange} />
-                    <button onClick = { onClick }> Buscar </button>
+                    <button onClick = { onClick }> <AiOutlineSearch /> </button>
                 </div>
-            </nav>
-
-            <div className='pokedex_machine'>
-                <PokedexBody imgPokemon={ imgPokemon2 } />
-                <CenterBar />
-                <PoquedexCover name={ namePokemon } weight={ weightPokemon2 } />
+            </header>
+            <div className='dexter'>
+                <div className='pokedex_machine'>
+                    <PokedexBody imgClass={ imgClass } imgPokemon={ imgPokemon.length == 0 ? 'https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png' : imgPokemon } rowButtonOnClick={ rowButtonOnClick } />
+                    <CenterBar />
+                    <PoquedexCover name={ namePokemon } weight={ weightPokemon2 } />
+                </div>
             </div>
+
         </div>
     )
 }

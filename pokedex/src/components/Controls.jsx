@@ -1,8 +1,14 @@
 import '../assets/css/controls.css'
-const Controls = () => {
+import Button from './Button'
+import { AiOutlineRedo } from "react-icons/ai"
+
+const Controls = ({ rowButtonOnClick }) => {
     return(
         <div className='controls_container'>
-            <button className='row_button'></button>
+            <Button btnClass={'row_button'} btnOnClick={ rowButtonOnClick }>
+                <AiOutlineRedo />
+            </Button>
+
             <div className='button_group'>
                 <button className='button_h'></button>
                 <button className='button_h button_h_green '></button>

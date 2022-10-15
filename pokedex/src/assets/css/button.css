@@ -1,0 +1,31 @@
+
+.row_button {
+    background: linear-gradient(45deg, black, #222222);
+    height: 35px;
+    width: 35px;
+    border-radius: 30px;
+    outline: 2px solid #700808;
+    border: 2px solid #000;
+    color: #777;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.row_button:hover {
+    cursor: pointer;
+    color: #ffcc00;
+    transition: .5s;
+    transform: rotate(360deg);
+}
+
+.row_button:active {
+    height: 35px;
+    width: 35px;
+    border-radius: 30px;
+    outline: 2px solid #700808;
+    border: 4px solid #000;
+    transition: .2s;    
+}

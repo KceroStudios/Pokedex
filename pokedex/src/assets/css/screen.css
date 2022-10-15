@@ -38,9 +38,31 @@
     flex-direction: column;
 }
 
-.screen img{
+@keyframes example {
+    from {transform: rotateY(90deg);}
+    to {transform: rotateY(0deg);}
+  }
+
+  @keyframes example2 {
+    from {transform: rotateY(90deg); transform: ;}
+    to {transform: rotateY(0deg);}
+  }
+
+  .row_left{
+    animation: example ;
+    animation-duration: 1s;
+  }
+
+  .row_right{
+    animation: example2 ;
+    animation-duration: 1s;
+  }
+
+.screen img {
     width: 120px;
 }
+
+
 
 .horm_container {
     display: flex;
