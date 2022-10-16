@@ -13,13 +13,11 @@ const Pokedex = ( ) => {
     const [ imgClass, setImgClass] = useState ( '' )
     const [ progressWidth, setProgessWidth ] = useState ('1')
     const [ xpPoquemon, setxpPoquemon ] = useState ('000')
-    const [ nextPokemon, setNextPokemon ] = useState ('1')
-
-    
-    
-
+   // const [ nextPokemon, setNextPokemon ] = useState ('1')
+    // const [ backPokemon, setBackPokemon ] = useState ()
+ 
     const onChange = ( e ) =>{
-        setSearch( e.target.value )
+        setSearch( e.target.value == 0 || e.target.value > 898 ? 1 : e.target.value)
     }
     
     const onClick = async ( e ) =>{
@@ -44,15 +42,22 @@ const Pokedex = ( ) => {
         setImgClass( 'zoom_out' )  
     }
 
-
     const btnNextPokemon = async ( e ) =>{
-        const data = await searchPokemon( nextPokemon )
-        setNextPokemon (data.id + 1)
+        const data = await searchPokemon( search )
+        setSearch (data.id == 898 ? 1 : data.id + 1)
         setPokemon(data) 
         setxpPoquemon(data.base_experience)
         setProgessWidth(data.base_experience / 3)
-        console.log(data) 
-        console.log(data.abilities[0].ability.name) 
+        console.log(search)
+    }
+
+    const btnBackPokemon = async ( e ) =>{
+        const data = await searchPokemon(search )
+        setSearch (data.id == 1 ? 898 : data.id - 1)
+        setPokemon(data) 
+        setxpPoquemon(data.base_experience)
+        setProgessWidth(data.base_experience / 3)
+        console.log(search)
     }
 
     
@@ -84,6 +89,7 @@ const Pokedex = ( ) => {
                         progressWidth={ progressWidth }
                         xpPoquemon={ xpPoquemon }
                         btnNextPokemon={ btnNextPokemon }
+                        btnBackPokemon={ btnBackPokemon }
                     />
                     <CenterBar />
                     <PoquedexCover name={ namePokemon } weight={ weightPokemon2 } />

@@ -1,23 +1,29 @@
-
-.row_button {
-    background: linear-gradient(45deg, black, #222222);
-    height: 35px;
-    width: 35px;
-    border-radius: 30px;
+.global_buttom{
+    transition: .5s;
     outline: 2px solid #700808;
     border: 2px solid #000;
-    color: #777;
-    font-size: 20px;
+    background: linear-gradient(45deg, black, #222222);
+    color: #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .5s;
 }
 
-.row_button:hover {
+.global_buttom:hover{
     cursor: pointer;
     color: #ffcc00;
     transition: .5s;
+}
+
+.row_button {
+    height: 35px;
+    width: 35px;
+    border-radius: 30px;
+    font-size: 20px;
+}
+
+.row_button:hover {
+
     transform: rotate(360deg);
 }
 
