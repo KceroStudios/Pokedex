@@ -5,7 +5,7 @@ import Separator from './Separator'
 import Screen from './Screen'
 import Controls from './Controls'
 
-const PokedexBody = ({imgPokemon, imgClass, rowButtonOnClick, btnZoomInOnClick, btnZoomoutOnClick }) => {
+const PokedexBody = ({imgPokemon, imgClass, rowButtonOnClick, btnZoomInOnClick, btnZoomoutOnClick, progressWidth, xpPoquemon ,btnNextPokemon}) => {
     return(
         <div className='pokedex_body'>
             <div className='pokedex_body_container'>
@@ -27,6 +27,9 @@ const PokedexBody = ({imgPokemon, imgClass, rowButtonOnClick, btnZoomInOnClick, 
                                 rowButtonOnClick={ rowButtonOnClick }
                                 btnZoomInOnClick={ btnZoomInOnClick }
                                 btnZoomoutOnClick={ btnZoomoutOnClick }
+                                progressWidth={ progressWidth }
+                                xpPoquemon={ xpPoquemon }
+                                btnNextPokemon={btnNextPokemon }
                             />
                         </div>
                     </div>

@@ -1,0 +1,40 @@
+.screen_min {
+    background: #355e35;
+    height: 25px;
+    outline: 2px solid #700808;
+    border-radius: 4px;
+    border: 1px solid #1e9a47;
+    width: 68px;
+    margin-top: 10px;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aquamarine;
+    font-size: 11px;
+    flex-wrap: wrap;
+}
+
+.screen_min small {
+ margin: 0 2px;
+}
+
+.screen_min .progress_bar {
+    background: #355e35;
+    width: 100%;
+    height: 6px;
+    border: 1px solid aquamarine;
+    margin-top: 1px;
+    padding: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.screen_min .progress {
+    background: aquamarine;  
+    height: auto;
+    border: 1px solid;
+    margin: 0;
+    transition: 1s;
+}

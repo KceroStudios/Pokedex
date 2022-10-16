@@ -66,3 +66,39 @@
 .button_h.bg_green {
     background: #124203;
 }
+
+
+.button_cross {
+    outline: 2px solid #700808;
+    border: 2px solid #000;
+    background: linear-gradient(45deg, black, #222222);
+}
+
+.button_cross_t {
+    height: 20px;
+    width: 15px;
+    border-radius: 7px 7px 4px 4px;
+    margin-left: 20px;
+    margin-bottom: 2px;
+}
+
+.button_cross_l {
+    height: 15px;
+    width: 20px;
+    border-radius: 7px 4px 4px 7px;
+}
+
+.button_cross_r {
+    height: 15px;
+    width: 20px;
+    border-radius: 4px 7px 7px 4px;
+    margin-left: 14px;
+}
+
+.button_cross_b {
+    height: 20px;
+    width: 15px;
+    border-radius: 4px 4px 7px 7px;
+    margin-left: 20px;
+    margin-top: 2px;
+}

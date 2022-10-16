@@ -4,7 +4,7 @@
 }
 
 @keyframes rotate_y_2 {
-  from {transform: rotateY(90deg); transform: ;}
+  from {transform: rotateY(90deg);}
   to {transform: rotateY(0deg);}
 }
 
