@@ -1,7 +1,7 @@
 .bar {
     border: 1px solid #700808;
-    width: 30px;
-    height: 280px;
+    width: 20px;
+    height: 310px;
     margin-left: -25px;
     margin-top: 55px;
     background: #dc0a2d;
@@ -9,13 +9,13 @@
 }
 
 .bar_col {
-    width: 30px;
+    width: 20px;
     display: flex;
     justify-content: space-between;
 }
 
 .bar_col .brigh {
-    width: 6px;
+    width: 4px;
     background: #ffffff5e;
     border-radius: 8px 3px 2px 4px;
     margin-left: 2px;
@@ -25,7 +25,7 @@
 }
 
 .bar_col .shaddow {
-    width: 9px;
+    width: 7px;
     background: #00000061;
     border-radius: 2px 5px 2px 2px;
     margin-left: 2px;
@@ -40,7 +40,7 @@
 }
 
 .bar_col.col2 {
-    height: 212px;
+    height: 243px;
 }
 
 .bar_col.col3 {

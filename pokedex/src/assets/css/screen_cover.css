@@ -9,4 +9,17 @@
     outline: 2px solid #700808;
     color: #ccc;
     font-size: 27px;
+    flex-direction: column;
+    align-content: space-between;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.screen_cover h3 {
+    margin: 0;
+    color: #ffcc00;
+}
+
+.screen_cover small{
+    font-size: 10px;
 }

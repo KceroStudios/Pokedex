@@ -13,8 +13,7 @@ const Pokedex = ( ) => {
     const [ imgClass, setImgClass] = useState ( '' )
     const [ progressWidth, setProgessWidth ] = useState ('1')
     const [ xpPoquemon, setxpPoquemon ] = useState ('000')
-   // const [ nextPokemon, setNextPokemon ] = useState ('1')
-    // const [ backPokemon, setBackPokemon ] = useState ()
+    const [ closeClass, setCloseClass ] = useState ('')
  
     const onChange = ( e ) =>{
         setSearch( e.target.value == 0 || e.target.value > 898 ? 1 : e.target.value)
@@ -60,12 +59,12 @@ const Pokedex = ( ) => {
         console.log(search)
     }
 
+    const btnColoseOnClick = ( e ) =>{  
+        setCloseClass( 'pokedex_cover_close' )  
+    }
     
-
-    const weightPokemon = pokemon &&  pokemon.weight
-    const weightPokemon2 = weightPokemon == 0 ? 'Bienvenidos' : weightPokemon
-
-    const namePokemon = pokemon &&  pokemon.abilities[0].ability.name
+    const namePokemon = pokemon &&  pokemon.name
+    const attributePokemon = pokemon &&  'Type : : : ' + pokemon.types[0].type.name
     
     const imgPokemon = rotarImagen == 2 ? pokemon &&  pokemon.sprites.back_default : pokemon &&  pokemon.sprites.front_default
 
@@ -92,7 +91,11 @@ const Pokedex = ( ) => {
                         btnBackPokemon={ btnBackPokemon }
                     />
                     <CenterBar />
-                    <PoquedexCover name={ namePokemon } weight={ weightPokemon2 } />
+                    <PoquedexCover 
+                        name={ namePokemon } 
+                        attribute={ attributePokemon }  
+                        btnColoseOnClick={ btnColoseOnClick }
+                        closeClass={ closeClass }/>
                 </div>
             </div>
 

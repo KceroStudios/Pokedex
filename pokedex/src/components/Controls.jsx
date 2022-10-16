@@ -1,5 +1,5 @@
 import '../assets/css/controls.css'
-import { AiOutlineRedo } from "react-icons/ai"
+import { AiOutlineRedo, AiOutlineCaretDown, AiOutlineCaretLeft, AiOutlineCaretRight, AiOutlineCaretUp } from "react-icons/ai"
 import Button from './Button'
 import ScreenMin from './ScreenMini'
 
@@ -20,10 +20,10 @@ const Controls = ({ rowButtonOnClick, btnZoomInOnClick, btnZoomoutOnClick, progr
             </div>
 
             <div className='button_group_cross'> 
-                <Button btnClass={ 'button_cross button_cross_t' } btnOnClick={ btnNextPokemon }>*</Button>
-                <Button btnClass={ 'button_cross button_cross_l' } btnOnClick={ btnBackPokemon }>*</Button>
-                <Button btnClass={ 'button_cross button_cross_r' } btnOnClick={ btnNextPokemon}>*</Button>
-                <Button btnClass={ 'button_cross button_cross_b' } btnOnClick={ btnBackPokemon }>*</Button>
+                <Button btnClass={ 'button_cross button_cross_t' } btnOnClick={ btnNextPokemon }><AiOutlineCaretUp /></Button>
+                <Button btnClass={ 'button_cross button_cross_l' } btnOnClick={ btnBackPokemon }><AiOutlineCaretLeft /></Button>
+                <Button btnClass={ 'button_cross button_cross_r' } btnOnClick={ btnNextPokemon}><AiOutlineCaretRight /></Button>
+                <Button btnClass={ 'button_cross button_cross_b' } btnOnClick={ btnBackPokemon }><AiOutlineCaretDown /></Button>
             </div>
         </div>
     )
