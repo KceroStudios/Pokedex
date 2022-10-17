@@ -14,7 +14,8 @@ const Pokedex = ( ) => {
     const [ progressWidth, setProgessWidth ] = useState ('1')
     const [ xpPoquemon, setxpPoquemon ] = useState ('000')
     const [ closeClass, setCloseClass ] = useState ('')
- 
+    const [ attributePokemon2Increase, setAttributePokemon2Increase] = useState (0)
+    
     const onChange = ( e ) =>{
         setSearch( e.target.value == 0 || e.target.value > 898 ? 1 : e.target.value)
     }
@@ -23,7 +24,8 @@ const Pokedex = ( ) => {
         const data = await searchPokemon( search )
         setPokemon(data) 
         setxpPoquemon(data.base_experience)
-        setProgessWidth(data.base_experience / 3)
+        setProgessWidth(data.base_experience / 3) 
+        setAttributePokemon2Increase( 0 )
         console.log(data) 
         console.log(data.abilities[0].ability.name) 
     }
@@ -47,7 +49,9 @@ const Pokedex = ( ) => {
         setPokemon(data) 
         setxpPoquemon(data.base_experience)
         setProgessWidth(data.base_experience / 3)
+        setAttributePokemon2Increase( 0 )
         console.log(search)
+        console.log(data)
     }
 
     const btnBackPokemon = async ( e ) =>{
@@ -56,17 +60,29 @@ const Pokedex = ( ) => {
         setPokemon(data) 
         setxpPoquemon(data.base_experience)
         setProgessWidth(data.base_experience / 3)
+        setAttributePokemon2Increase( 0 )
         console.log(search)
     }
 
     const btnColoseOnClick = ( e ) =>{  
         setCloseClass( 'pokedex_cover_close' )  
     }
+
+    const nextMoves = ( e ) =>{  
+        setAttributePokemon2Increase(attributePokemon2Increase == pokemon.moves.length - 1 ? 0 :  attributePokemon2Increase + 1)
+        console.log(attributePokemon2Increase)
+    }
+
+    const prevMoves = ( e ) =>{  
+        setAttributePokemon2Increase(attributePokemon2Increase == 0 ? 0 : attributePokemon2Increase - 1)
+        console.log(attributePokemon2Increase)
+        console.log(pokemon.moves.length)
+    }
     
     const namePokemon = pokemon &&  pokemon.name
-    const attributePokemon = pokemon &&  'Type : : : ' + pokemon.types[0].type.name
-    
+    const attributePokemon = pokemon &&  'Type : : : : ' + pokemon.types[0].type.name
     const imgPokemon = rotarImagen == 2 ? pokemon &&  pokemon.sprites.back_default : pokemon &&  pokemon.sprites.front_default
+    const attributePokemon2 = pokemon &&  'Moves : : : : ' + pokemon.moves[attributePokemon2Increase].move.name
 
     return(
         <div className="pokedex_container">
@@ -93,9 +109,13 @@ const Pokedex = ( ) => {
                     <CenterBar />
                     <PoquedexCover 
                         name={ namePokemon } 
-                        attribute={ attributePokemon }  
+                        attribute={ attributePokemon } 
+                        attribute2={ attributePokemon2 } 
                         btnColoseOnClick={ btnColoseOnClick }
-                        closeClass={ closeClass }/>
+                        closeClass={ closeClass }
+                        prevMoves={ prevMoves }
+                        nextMoves={ nextMoves }
+                    />
                 </div>
             </div>
 

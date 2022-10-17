@@ -1,6 +1,5 @@
 .screen_cover {
-    background: #111;
-    height: 50px;
+    background: #111;  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,6 +12,18 @@
     align-content: space-between;
     text-transform: uppercase;
     font-size: 12px;
+}
+
+.screen_cover_1{
+    height: 50px;
+}
+
+.screen_cover_2{
+    height: 25px;
+    margin-top: 4px;
+    background: #777;
+    color: #000;
+    border: 1px solid #aaa;
 }
 
 .screen_cover h3 {
