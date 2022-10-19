@@ -11,8 +11,7 @@ const Screen = ({imgPokemon, imgClass}) => {
                     <Led color={'led_red'}/>
                 </div>
                 <div className='screen'>
-                    <img className={ imgClass } src={imgPokemon} alt="no found" />
-                    
+                    <img className={ imgClass } src={imgPokemon} alt="no found" />  
                 </div>                    
                 <div className='horm_container'>
                     <Led color={'led_red'}/>

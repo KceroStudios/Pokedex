@@ -1,12 +1,14 @@
 import '../assets/css/pokedex.css'
-import React, { useState } from "react";
-import { searchPokemon } from "../Api";
+import React, { useState, useEffect } from "react";
+import { searchPokemon, getPokemons, getPokemonData } from "../Api";
 import PokedexBody from '../components/PokedexBody'
 import PoquedexCover from '../components/PokedexCover'
 import CenterBar from '../components/CenterBar'
 import { AiOutlineSearch } from "react-icons/ai";
+import Button from './Button';
 
 const Pokedex = ( ) => {
+
     const [ search, setSearch ] = useState ( '1' )
     const [ pokemon, setPokemon ] = useState ( '' )
     const [ rotarImagen, setRotarImagen ] = useState ( '' )
@@ -15,7 +17,26 @@ const Pokedex = ( ) => {
     const [ xpPoquemon, setxpPoquemon ] = useState ('000')
     const [ closeClass, setCloseClass ] = useState ('')
     const [ attributePokemon2Increase, setAttributePokemon2Increase] = useState (0)
-    
+    const [ listaPokemon, setListaPokemon ]= useState([])
+
+    const fetchPokemons = async () =>{
+        try{
+            const data = await getPokemons()
+            const promises = data.results.map(async (listaPokemon) => {
+                return await getPokemonData(listaPokemon.url)
+            })
+            const results = await Promise.all(promises)
+            setListaPokemon(results)
+        } catch(err){
+
+        }
+    }
+
+    useEffect(()=>{
+        fetchPokemons()
+    }, [])
+
+
     const onChange = ( e ) =>{
         setSearch( e.target.value == 0 || e.target.value > 898 ? 1 : e.target.value)
     }
@@ -75,14 +96,25 @@ const Pokedex = ( ) => {
 
     const prevMoves = ( e ) =>{  
         setAttributePokemon2Increase(attributePokemon2Increase == 0 ? 0 : attributePokemon2Increase - 1)
-        console.log(attributePokemon2Increase)
+        console.log(typeof attributePokemon2Increase)
         console.log(pokemon.moves.length)
+    }
+
+
+    const btnSinglePokemonOnClick = async ( e ) =>{
+        const data = listaPokemon[e - 1]
+        console.log (data)  
+        setxpPoquemon(data.base_experience)
+        setProgessWidth(data.base_experience / 3)
+        setAttributePokemon2Increase( 0 )
+        setPokemon(data)
+        console.log({e})
     }
     
     const namePokemon = pokemon &&  pokemon.name
     const attributePokemon = pokemon &&  'Type : : : : ' + pokemon.types[0].type.name
     const imgPokemon = rotarImagen == 2 ? pokemon &&  pokemon.sprites.back_default : pokemon &&  pokemon.sprites.front_default
-    const attributePokemon2 = pokemon &&  'Moves : : : : ' + pokemon.moves[attributePokemon2Increase].move.name
+    const attributePokemon2 = pokemon &&  'Move nº' + (attributePokemon2Increase + 1) + ' : : : ' + pokemon.moves[attributePokemon2Increase].move.name
 
     return(
         <div className="pokedex_container">
@@ -115,10 +147,11 @@ const Pokedex = ( ) => {
                         closeClass={ closeClass }
                         prevMoves={ prevMoves }
                         nextMoves={ nextMoves }
+                        listaPokemon={ listaPokemon }
+                        btnSinglePokemonOnClick={ btnSinglePokemonOnClick }
                     />
-                </div>
+                </div>     
             </div>
-
         </div>
     )
 }

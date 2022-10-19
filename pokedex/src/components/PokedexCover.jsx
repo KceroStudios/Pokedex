@@ -6,7 +6,17 @@ import Led from './Led'
 import Button from './Button'
 import { AiOutlineArrowLeft,  AiOutlineArrowRight} from "react-icons/ai";
 
-const PoquedexCover = ({ name, attribute, attribute2, btnColoseOnClick, closeClass, prevMoves, nextMoves }) =>{
+const PoquedexCover = ({ 
+    name, 
+    attribute, 
+    attribute2, 
+    btnColoseOnClick, 
+    closeClass, 
+    prevMoves, 
+    nextMoves, 
+    listaPokemon,
+    btnSinglePokemonOnClick
+ }) =>{
     return(
         <div className={` ${ closeClass } pokedex_cover_container`}>
             <div className='pokedex_cover_separador'></div>
@@ -25,20 +35,11 @@ const PoquedexCover = ({ name, attribute, attribute2, btnColoseOnClick, closeCla
                             screenCoverClass={ 'screen_cover screen_cover_2' }
                         />
                         <div className='button_group_2'>
-                            <Button btnClass={'button_h'} btnOnClick={prevMoves}> <AiOutlineArrowLeft /> </Button>
-                            <Button btnClass={'button_h'} btnOnClick={nextMoves}> <AiOutlineArrowRight /> </Button>   
+                            <Button btnClass={ 'button_h' } btnOnClick={prevMoves}> <AiOutlineArrowLeft /> </Button>
+                            <Button btnClass={ 'button_h' } btnOnClick={nextMoves}> <AiOutlineArrowRight /> </Button>   
                         </div>
                         <div className='button_group'>
-                            <ButtonSquare/>
-                            <ButtonSquare/>
-                            <ButtonSquare/>
-                            <ButtonSquare/>
-                            <ButtonSquare/>
-                            <ButtonSquare/>
-                            <ButtonSquare/>
-                            <ButtonSquare/>
-                            <ButtonSquare/>
-                            <ButtonSquare/>
+                            {listaPokemon.map(pokemon => <Button btnOnClick={()=>btnSinglePokemonOnClick(pokemon.id)} key={pokemon.id} btnClass={ 'button_square' }>{pokemon.id}</Button>)}
                         </div>
                         <div className='button_group_3'>
                             <ButtonSquare/>
@@ -49,9 +50,7 @@ const PoquedexCover = ({ name, attribute, attribute2, btnColoseOnClick, closeCla
                             <button className="button_h button_h_gray ">
                             </button>
                             <button className="button_h button_h_gray "></button>
-                        </div>
-
-                       
+                        </div>   
                     </div>
                     <Button
                         btnOnClick={ btnColoseOnClick } 
