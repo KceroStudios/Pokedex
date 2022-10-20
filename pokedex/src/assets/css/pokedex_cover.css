@@ -138,16 +138,18 @@
 
 .cover_cover {
     background: #dc0a2d;
-    height: 245px;
+
     width: 172px;
     margin-left: -200px;
     z-index: 1000;
     margin-top: 98px;
     opacity: 0;
-    transition: 2s;
+    transition: 1s;
+    height: 0px;
 }
 
 .hidden{
     opacity: 1;
     transition: .5s;
+    height: 245px;
 }
