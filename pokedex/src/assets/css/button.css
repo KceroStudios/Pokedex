@@ -110,16 +110,63 @@
 }
 
 .button_square {
-    background: #28abfd;
+    background: linear-gradient(230deg, #009dff, #273370);
     border: 1px solid #0f4266;
     border-bottom: 3px solid #0f4266;
     border-radius: 3px;
     outline: 1px solid #222;
     width: 20%;
     height: 30px;
+    color: #6ea7df;
+    font-weight: 600;
 }
 
 .button_square:active {
     border-color:#0f4266;
    
+}
+
+.pokedex_cover .button_group_3 .button_square {
+    background: #ccc;
+    border: 1px solid #333;
+    border-bottom: 3px solid #777;
+    border-radius: 3px;
+    outline: 1px solid #89051c;
+    width: 20%;
+    height: 23px;
+    color: #333;
+    margin-right: 3px;
+}
+
+.pokedex_cover .button_group_3 .button_square:active {
+    border: 2px solid #333;
+}
+
+.close {
+    border: none;
+    outline: none;
+    margin-left: 145px;
+    background: #89051c;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 2px 6px 2px 20px;
+    border-radius: 4px;
+    margin-top: -9px;
+    transform: rotateZ(270deg);
+}
+
+.close small {
+    font-size: 8px;
+    margin-right: 2px;
+
+}
+
+.close:active {
+    border: none;
+    outline: none;
+    transform: scale(2) rotateZ(270deg) ;
+    filter:opacity(.5)
+   
+    
 }

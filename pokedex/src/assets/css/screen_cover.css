@@ -26,6 +26,18 @@
     border: 1px solid #aaa;
 }
 
+.screen_cover_3 {
+    width: 45%;
+    height: 30px;
+    margin: 0;
+    border-radius: 4px;
+    outline: 2px solid #700808;
+    color: #ccc;
+    line-height: 8px;
+    font-size: 10px;
+}
+
+
 .screen_cover h3 {
     margin: 0;
     color: #ffcc00;

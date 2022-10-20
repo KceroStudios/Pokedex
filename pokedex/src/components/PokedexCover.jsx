@@ -1,10 +1,9 @@
 import '../assets/css/pokedex_cover.css'
 import Separator from './Separator'
 import ScreenCover from './ScreenCover'
-import ButtonSquare from './ButtonSquare'
 import Led from './Led'
 import Button from './Button'
-import { AiOutlineArrowLeft,  AiOutlineArrowRight} from "react-icons/ai";
+import { AiOutlineCloseCircle, AiOutlineArrowLeft,  AiOutlineArrowRight, AiOutlineDoubleLeft, AiOutlineDoubleRight} from "react-icons/ai";
 
 const PoquedexCover = ({ 
     name, 
@@ -15,7 +14,12 @@ const PoquedexCover = ({
     prevMoves, 
     nextMoves, 
     listaPokemon,
-    btnSinglePokemonOnClick
+    btnSinglePokemonOnClick,
+    paginationOnClick,
+    paginationBackOnClick,
+    attribute3,
+    attributePokemon4,
+    hiddenClass
  }) =>{
     return(
         <div className={` ${ closeClass } pokedex_cover_container`}>
@@ -42,21 +46,31 @@ const PoquedexCover = ({
                             {listaPokemon.map(pokemon => <Button btnOnClick={()=>btnSinglePokemonOnClick(pokemon.id)} key={pokemon.id} btnClass={ 'button_square' }>{pokemon.id}</Button>)}
                         </div>
                         <div className='button_group_3'>
-                            <ButtonSquare/>
-                            <ButtonSquare/>
+                            <Button btnOnClick={paginationBackOnClick} btnClass={'button_square'}>
+                                <AiOutlineDoubleLeft/>
+                            </Button>
+                            <Button btnOnClick={paginationOnClick} btnClass={'button_square'}>
+                                <AiOutlineDoubleRight/>
+                            </Button>
                             <Led color='led_yellow'/>
                         </div>
-                        <div className='button_group_4'>
-                            <button className="button_h button_h_gray ">
-                            </button>
-                            <button className="button_h button_h_gray "></button>
+                        <div className='screen_group'>
+                            <ScreenCover  
+                                attribute={ attribute3 }
+                                screenCoverClass={ 'screen_cover screen_cover_3' }
+                            />
+                            <ScreenCover  
+                                attribute={ attributePokemon4 }
+                                screenCoverClass={ 'screen_cover screen_cover_3' }
+                            />
                         </div>   
+                        <Button btnClass={'close'} btnOnClick={ btnColoseOnClick } > <small>Cerrar: </small> <AiOutlineCloseCircle/></Button>
                     </div>
-                    <Button
-                        btnOnClick={ btnColoseOnClick } 
-                    />
+                    
                 </div>                          
             </div>
+
+            <div className={`cover_cover ${ hiddenClass }`}></div>
             
         </div>
     )
