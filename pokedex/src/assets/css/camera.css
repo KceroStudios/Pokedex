@@ -41,5 +41,47 @@
     height: 5px;
 }
 
+@keyframes brillo {
+    from {background: #2aa9fb;border: 1px solid #333;}
+    to {background: rgb(156, 223, 250);border: 1px solid rgb(105, 167, 209);}
+}
 
+@keyframes brillo2 {
+    from {background: #166b9d;}
+    to {background: #5db4e7;}
+}
 
+@keyframes brillo3 {
+    from {background: #2aa9fb;width: 12px; height: 12px;}
+    to {background: rgb(156, 223, 250);width: 16px; height: 16px;}
+}
+
+@keyframes brillo4 {
+    from {width: 5px; height: 5px;}
+    to {width: 10px; height: 10px;}
+}
+
+.animation .led_group_cam_1 {
+    animation: brillo ;
+    animation-duration: .5s;
+    animation-iteration-count: 20
+}
+
+.animation .led_group_cam_2 {
+    animation: brillo2 ;
+    animation-duration: .5s;
+    animation-iteration-count: 20
+
+}
+
+.animation .led_group_cam_3 {
+    animation: brillo3 ;
+    animation-duration: .5s;
+    animation-iteration-count: 20
+}
+
+.animation .led_group_cam_4 {
+    animation: brillo4 ;
+    animation-duration: .5s;
+    animation-iteration-count: 20
+}

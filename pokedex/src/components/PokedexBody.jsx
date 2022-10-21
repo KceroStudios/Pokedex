@@ -5,12 +5,23 @@ import Separator from './Separator'
 import Screen from './Screen'
 import Controls from './Controls'
 
-const PokedexBody = ({imgPokemon, imgClass, rowButtonOnClick, btnZoomInOnClick, btnZoomoutOnClick, progressWidth, xpPoquemon ,btnNextPokemon, btnBackPokemon}) => {
+const PokedexBody = ({
+    imgPokemon, 
+    imgClass, 
+    rowButtonOnClick, 
+    btnZoomInOnClick, 
+    btnZoomoutOnClick, 
+    progressWidth, 
+    xpPoquemon,
+    btnNextPokemon, 
+    btnBackPokemon,
+    animation
+}) => {
     return(
         <div className='pokedex_body'>
             <div className='pokedex_body_container'>
                 <div className='pokedex_body_led_group'>
-                    <Camera />
+                    <Camera animation={ animation } />
                     <div className='pokedex_body_led_group_2'>
                         <Led color='led_red'/>
                         <Led color='led_yellow'/>

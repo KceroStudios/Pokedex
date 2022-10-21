@@ -146,10 +146,12 @@
     opacity: 0;
     transition: 1s;
     height: 0px;
+    filter: blur(15px);
 }
 
 .hidden{
     opacity: 1;
     transition: .5s;
     height: 245px;
+    filter: blur(0);
 }

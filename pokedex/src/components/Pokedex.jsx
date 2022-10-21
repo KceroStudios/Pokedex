@@ -4,7 +4,8 @@ import { searchPokemon, getPokemons, getPokemonData } from "../Api";
 import PokedexBody from '../components/PokedexBody'
 import PoquedexCover from '../components/PokedexCover'
 import CenterBar from '../components/CenterBar'
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai"
+import AlertSearch from './AlertSearch';
 
 const Pokedex = ( ) => {
     const [ search, setSearch ] = useState ( '1' )
@@ -15,11 +16,15 @@ const Pokedex = ( ) => {
     const [ progressWidth, setProgessWidth ] = useState ('1')
     const [ xpPoquemon, setxpPoquemon ] = useState ('000')
     const [ closeClass, setCloseClass ] = useState ('')
+    const [ CloseOpen, setCloseOpen ] = useState (' close ')
     const [ attributePokemon2Increase, setAttributePokemon2Increase] = useState (0)
     const [ listaPokemon, setListaPokemon ] = useState([])
     const [ offset, setOffset ] = useState( 0 )
+    const [ hiddenWrongSearchClass, setHiddenWrongSearchClass ] = useState( 'hidden' )
+    const [ animation, setAnimation ] = useState ('')
 
-console.log(pokemon)
+    
+
     const fetchPokemons = async (e) =>{
         try{
             const data = await getPokemons( e )
@@ -38,15 +43,18 @@ console.log(pokemon)
     }, [])
 
     const onChange = ( e ) =>{
-        setSearch( e.target.value == 0 || e.target.value > 898 ? 1 : e.target.value)
+        setSearch( e.target.value == 0 || e.target.value > 898 ? 1 : e.target.value =! NaN ? (e.target.value).toLowerCase() : e.target.value)
     }
     
     const onClick = async ( e ) =>{
+        setAnimation('animation')
         const data = await searchPokemon( search )
-        setPokemon(data) 
-        setxpPoquemon(data.base_experience)
-        setProgessWidth(data.base_experience / 3) 
+        setPokemon(data == undefined ? '' : data) 
+        setxpPoquemon(data == undefined ? '' : data.base_experience)
+        setProgessWidth(data == undefined ? 0 : data.base_experience / 3) 
         setAttributePokemon2Increase( 0 ) 
+        setHiddenWrongSearchClass( data == undefined ? '' : 'hidden' ) 
+        setAnimation('')   
     }
 
     const rowButtonOnClick = ( e ) =>{
@@ -79,9 +87,10 @@ console.log(pokemon)
         setPokemon(data)
     }
 
-    const btnColoseOnClick = ( e ) =>{  
+    const btnCloseOnClick = ( e ) =>{  
         setCloseClass( closeClass == 'pokedex_cover_close' ? '' :'pokedex_cover_close' )
-        setHiddenClass( hiddenClass == 'hidden' ? '' : 'hidden' )  
+        setHiddenClass( hiddenClass == 'hidden' ? '' : 'hidden' )
+        setCloseOpen( CloseOpen == ' Open ' ? ' close ' : ' Open ')  
     }
 
     const nextMoves = ( e ) =>{  
@@ -93,8 +102,7 @@ console.log(pokemon)
     }
 
     const btnSinglePokemonOnClick = async ( e ) =>{
-        const data = await searchPokemon( e )
-        // const data = listaPokemon[e - 1] 
+        const data = await searchPokemon( e ) 
         setxpPoquemon(data.base_experience)
         setProgessWidth(data.base_experience / 3)
         setAttributePokemon2Increase( 0 )
@@ -113,18 +121,25 @@ console.log(pokemon)
         fetchPokemons( page )   
     }
 
-  
-    
-    
+    const alertSearchCloseOnClick = () => {
+        setHiddenWrongSearchClass( 'hidden' )
+    }
+
     const namePokemon = pokemon &&  pokemon.name
     const attributePokemon = pokemon &&  'Type : : : : ' + pokemon.types[0].type.name
     const imgPokemon = rotarImagen == 2 ? pokemon &&  pokemon.sprites.back_default : pokemon &&  pokemon.sprites.front_default
     const attributePokemon2 = pokemon &&  'Move nº' + (attributePokemon2Increase + 1) + ' : : : ' + pokemon.moves[attributePokemon2Increase].move.name
     const attributePokemon3 = pokemon &&  'weight : ' + pokemon.weight
     const attributePokemon4 = pokemon &&  'height : ' + pokemon.height
+    const wrongPokemon = search
 
     return(
         <div className="pokedex_container">
+            <AlertSearch 
+                wrongPokemon={ wrongPokemon }
+                hiddenWrongSearchClass={ hiddenWrongSearchClass }
+                alertSearchCloseOnClick={ alertSearchCloseOnClick }
+            />
             <header className='pokedex_header'>
                 <img alt="PokéAPI" src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" className="logo" width={200} />
                 <div className="buscador">
@@ -144,6 +159,7 @@ console.log(pokemon)
                         xpPoquemon={ xpPoquemon }
                         btnNextPokemon={ btnNextPokemon }
                         btnBackPokemon={ btnBackPokemon }
+                        animation={ animation }
                     />
                     <CenterBar />
                     <PoquedexCover 
@@ -152,7 +168,7 @@ console.log(pokemon)
                         attribute2={ attributePokemon2 } 
                         attribute3={ attributePokemon3 } 
                         attributePokemon4={ attributePokemon4 }
-                        btnColoseOnClick={ btnColoseOnClick }
+                        btnCloseOnClick={ btnCloseOnClick }
                         closeClass={ closeClass }
                         prevMoves={ prevMoves }
                         nextMoves={ nextMoves }
@@ -161,6 +177,7 @@ console.log(pokemon)
                         paginationOnClick={ paginationOnClick }
                         paginationBackOnClick={ paginationBackOnClick }
                         hiddenClass={ hiddenClass }
+                        CloseOpen={ CloseOpen }
                     />
                 </div>     
             </div>

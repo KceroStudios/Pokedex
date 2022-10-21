@@ -9,7 +9,7 @@ const PoquedexCover = ({
     name, 
     attribute, 
     attribute2, 
-    btnColoseOnClick, 
+    btnCloseOnClick, 
     closeClass, 
     prevMoves, 
     nextMoves, 
@@ -19,7 +19,8 @@ const PoquedexCover = ({
     paginationBackOnClick,
     attribute3,
     attributePokemon4,
-    hiddenClass
+    hiddenClass,
+    CloseOpen
  }) =>{
     return(
         <div className={` ${ closeClass } pokedex_cover_container`}>
@@ -64,13 +65,21 @@ const PoquedexCover = ({
                                 screenCoverClass={ 'screen_cover screen_cover_3' }
                             />
                         </div>   
-                        <Button btnClass={'close'} btnOnClick={ btnColoseOnClick } > <small>Cerrar: </small> <AiOutlineCloseCircle/></Button>
+                        <Button btnClass={'close'} btnOnClick={ btnCloseOnClick } > <small>{ CloseOpen }</small> <AiOutlineCloseCircle/></Button>
                     </div>
                     
                 </div>                          
             </div>
 
-            <div className={`cover_cover ${ hiddenClass }`}></div>
+            <div className={`cover_cover ${ hiddenClass }`}>
+                <div className='pokeboll'>
+                    <div className='pokeball_line'></div>  
+                    <div className='pokeboll_center'>
+                        <div className='pokeboll_center_center'></div>
+                    </div>   
+                </div> 
+                <div className='copy'>POKEDEX V-0.1 by KceroStudios</div>   
+            </div>
             
         </div>
     )
