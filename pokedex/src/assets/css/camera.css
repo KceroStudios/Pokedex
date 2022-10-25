@@ -1,0 +1,87 @@
+.led_group_cam {
+    background: #fff;
+    border: 2px solid #700808;
+    border-radius: 30px;
+    padding: 4px;
+    height: fit-content;
+    width: fit-content;
+}
+
+.led_group_cam_1 {
+    background: #2aa9fb;
+    border: 1px solid #333;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.led_group_cam_2 {
+    background: #166b9d;
+    border-radius: 30px;
+    width: 35px;
+    height: 35px;
+    filter: blur(1.5px);
+}
+
+.led_group_cam_3 {
+    background: #2aa9fb;
+    border-radius: 30px;
+    width: 12px;
+    height: 12px;
+    padding: 6px 0px 0px 6px;
+}
+
+.led_group_cam_4 {
+    background: #fff;
+    border-radius: 30px;
+    width: 5px;
+    height: 5px;
+}
+
+@keyframes brillo {
+    from {background: #2aa9fb;border: 1px solid #333;}
+    to {background: rgb(156, 223, 250);border: 1px solid rgb(105, 167, 209);}
+}
+
+@keyframes brillo2 {
+    from {background: #166b9d;}
+    to {background: #5db4e7;}
+}
+
+@keyframes brillo3 {
+    from {background: #2aa9fb;width: 12px; height: 12px;}
+    to {background: rgb(156, 223, 250);width: 16px; height: 16px;}
+}
+
+@keyframes brillo4 {
+    from {width: 5px; height: 5px;}
+    to {width: 10px; height: 10px;}
+}
+
+.animation .led_group_cam_1 {
+    animation: brillo ;
+    animation-duration: .5s;
+    animation-iteration-count: 20
+}
+
+.animation .led_group_cam_2 {
+    animation: brillo2 ;
+    animation-duration: .5s;
+    animation-iteration-count: 20
+
+}
+
+.animation .led_group_cam_3 {
+    animation: brillo3 ;
+    animation-duration: .5s;
+    animation-iteration-count: 20
+}
+
+.animation .led_group_cam_4 {
+    animation: brillo4 ;
+    animation-duration: .5s;
+    animation-iteration-count: 20
+}

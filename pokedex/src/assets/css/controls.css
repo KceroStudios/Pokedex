@@ -1,0 +1,22 @@
+.controls_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    margin: 10px 0px;
+}
+
+.button_group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70px;
+    justify-content: space-between;
+}
+
+.button_group_cross {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 54px;
+}

@@ -1,0 +1,106 @@
+.screen_cover {
+    background: #111;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid #333;
+    outline: 2px solid #700808;
+    color: #ccc;
+    font-size: 27px;
+    flex-direction: column;
+    align-content: space-between;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.screen_cover_1{
+    height: 50px;
+}
+
+.screen_cover_2{
+    height: 25px;
+    margin-top: 4px;
+    background: #777;
+    color: #000;
+    border: 1px solid #aaa;
+}
+
+.screen_cover_3 {
+    width: 45%;
+    height: 30px;
+    margin: 0;
+    border-radius: 4px;
+    outline: 2px solid #700808;
+    color: #ccc;
+    line-height: 8px;
+    font-size: 10px;
+}
+
+
+.screen_cover h3 {
+    margin: 0;
+    color: #ffcc00;
+}
+
+.screen_cover small{
+    font-size: 10px;
+}
+
+.pokeboll {
+    border: #700808 2px solid;
+    height: 130px;
+    width: 130px;
+    border-radius: 200px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 30px;
+    display: none;
+}
+
+.hidden .pokeboll {
+    border: #700808 2px solid;
+    height: 130px;
+    width: 130px;
+    border-radius: 200px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 30px;
+    display: block;
+}
+
+.pokeball_line {
+    background: #700808;
+    height: 10px;
+    margin-top: 60px;
+}
+
+.pokeboll_center {
+    background-color: #dc0a2d;
+    height: 30px;
+    width: 30px;
+    margin: auto;
+    margin-top: -30px;
+    border: #700808 10px solid;
+    border-radius: 30px;
+}
+
+.pokeboll_center_center {
+    background-color: #700808;
+    height: 22px;
+    width: 22px;
+    border: #dc0a2d 4px solid;
+    border-radius: 30px;
+}
+
+.copy {
+    transform: rotateY(182deg);
+    font-size: 10px;
+    text-align: center;
+    margin-top: 70px;
+    color: #000000;
+}
+
+.pokedex_cover_close .close{
+    filter: blur(0);
+}

@@ -1,0 +1,29 @@
+
+.led {
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    margin: 2px;
+    padding: 2px 0 0 2px ;
+}
+
+.led_red {
+    background: red;
+}
+
+.led_yellow {
+    background: yellow;
+}
+
+.led_green {
+    background: green;
+}
+
+.led_brigh {
+    background: #fff;
+    width: 4px;
+    height: 4px;
+    border-radius: 10px;
+    filter: blur(0.8px);
+}
