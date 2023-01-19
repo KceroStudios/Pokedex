@@ -1,0 +1,19 @@
+@keyframes rotate_y {
+  from {transform: rotateY(90deg);}
+  to {transform: rotateY(0deg);}
+}
+
+@keyframes rotate_y_2 {
+  from {transform: rotateY(90deg);}
+  to {transform: rotateY(0deg);}
+}
+
+.zoom_in{
+  transform: scale(1);
+  transition: 1s;
+}
+
+.zoom_out{
+  transform: scale(1.5);
+  transition: 1s;
+}

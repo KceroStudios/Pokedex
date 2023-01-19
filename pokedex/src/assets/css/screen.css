@@ -1,0 +1,76 @@
+.screen_container {
+    background: #eee;
+    width: 170px;
+    margin: 0 auto;
+    border-radius: 3px 3px 3px 20px;
+    outline: 2px #5c0909 solid;
+    border: 2px solid #ccc;
+    border-bottom: 4px solid #ccc;
+}
+
+.screen_container_2 {
+    margin: 0 auto;
+    border-radius: 2px 2px 2px 16px;
+    border: 1px solid #777;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screen_led_group{
+    display: flex;
+}
+
+.screen_led_group .led{
+    transform: scale(.6);
+}
+
+.screen {
+    background: #ccc;
+    border: 1px solid #ccc;
+    height: 120px;
+    width: 140px;
+    border-radius: 4px;
+    outline: 1px solid #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+  .row_left{
+    animation: rotate_y ;
+    animation-duration: 1s;
+  }
+
+  .row_right{
+    animation: rotate_y_2 ;
+    animation-duration: 1s;
+  }
+
+.screen img {
+    width: 120px;
+}
+
+
+
+.horm_container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+}
+
+.screen .cont {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.temp{
+    margin-top: -30px;
+}
+
