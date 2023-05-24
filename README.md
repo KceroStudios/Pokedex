@@ -1,9 +1,13 @@
 # Recreation of Classic Pokedex.
 
 REACT js
+
 NODE v 16.14.2
+
 API : [POKEAPI](https://pokeapi.co/).
+
 DEMO : [live view](https://pokedex-rose-chi.vercel.app/).
+
 
 # Dependencies
 
