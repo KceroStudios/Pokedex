@@ -1,4 +1,7 @@
 # Recreation of Classic Pokedex.
+# preview
+
+![Image text](https://github.com/KceroStudios/Pokedex/blob/POKEDEX-v0.1/public/prev.png)
 
 REACT js
 
@@ -31,6 +34,4 @@ DEMO : [live view](https://pokedex-rose-chi.vercel.app/).
 
 +-- web-vitals@2.1.4
 
-# preview
 
-![Image text](https://github.com/KceroStudios/Pokedex/blob/POKEDEX-v0.1/public/prev.png)
