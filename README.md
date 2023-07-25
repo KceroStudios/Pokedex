@@ -9,8 +9,14 @@ NODE v 16.14.2
 
 API : [POKEAPI](https://pokeapi.co/).
 
-DEMO : [live view](https://pokedex-rose-chi.vercel.app/).
+DEMO: <a href="https://pokedex-rose-chi.vercel.app/" target="_blank">live view</a>
 
+
+
+
+# Description
+
+More than just a children's game, this Pokédex offers the opportunity to explore various aspects of frontend development. Starting with the design, which was recreated entirely using CSS and JavaScript, without relying on images. It also allows the implementation of API consumption and other fundamental frontend elements.
 
 # Dependencies
 
@@ -33,5 +39,6 @@ DEMO : [live view](https://pokedex-rose-chi.vercel.app/).
 +-- svg-sprite-loader@6.0.11
 
 +-- web-vitals@2.1.4
+
 
 
